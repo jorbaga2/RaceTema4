@@ -467,11 +467,13 @@ students
 Considera los datos almacenado en `sat` y haz las transformaciones adecuadas para que las columnas del conjunto `tidy` sean `score_range, part, sex, count` en ese orden. Ten en cuenta que los datos totales no es necesario almacenarlos ya que se pueden generar a posteriori.
 
 ```{r}
+sat_tidy <- sat %>%
+  pivot_longer(cols = -score_range,  
+               names_to = c("part", "sex"),  
+               names_sep = "_",
+               values_to = "count")
 
-
-
-
-
+print(sat_tidy)
 
 ```
 
