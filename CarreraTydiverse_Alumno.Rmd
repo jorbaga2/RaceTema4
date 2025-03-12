@@ -258,7 +258,8 @@ la mediana (función `stats::median`) de la variable `size` y almacénalos en la
 
 ```{r}
 
-
+pack_sum<- by_package %>% summarise(count = n(), unique = n_distinct(ip_id), countries = n_distinct(country), med_bytes = stats::median(size))
+pack_sum
 
 
 
