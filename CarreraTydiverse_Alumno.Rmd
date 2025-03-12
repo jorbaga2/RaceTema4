@@ -340,7 +340,8 @@ cran %>% mutate(size_mb = size * 2^20 )
 
 27. Selecciona aquellas descargas cuyo tamaño es menor o igual que 0.5 Mbytes
 ```{r}
-
+#0.5 bytes son 500000 bytes
+cran %>% filter(size<=500000)
 
 
 ```
